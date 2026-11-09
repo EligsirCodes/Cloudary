@@ -1,0 +1,727 @@
+/* BODY - to remove default margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MAIN - main container */
+main {
+    height: 200vh;
+    width: 98.9vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: url(./Assets/Student\ Page\ BG.png), linear-gradient(to bottom right, rgb(135,182,255), rgb(115, 147, 252), rgb(36,115,255), rgb(115, 147, 252), rgb(135,182,255));
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* OUTSIDE ELEMENTS - for the site logo */
+#imgClive {
+    height: 30%;
+    width: 18%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    border-bottom-right-radius: 250%;
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+
+    transition: transform .5s ease;
+} #imgClive:hover {
+    transform: scale(1.05);
+}
+
+
+/* TOP SECTION - styles for the header and buttons */
+#secTop {
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} #secBorderTop {
+    height: 70%;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 41, 135);
+    border: solid rgb(0, 41, 135) 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 5px rgb(0, 41, 135, .9);
+} #divBodyTop {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+} 
+#secTextTop {
+    height: 60%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+} #artWelc {
+    margin-bottom: -1.7%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 250%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} #artName {
+    color: rgb(0, 41, 135);
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 370%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} #artID {
+    margin-top: -.5%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 150%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+}
+#secButtonsTop {
+    height: 40%;
+    width: 100%;
+    margin-top: -1.2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+} #secButtonsTop > button {
+    height: 55%;
+    width: 18.5%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 110%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #secButtonsTop > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+}
+
+
+/* BOTTOM SECTION - container for the multiple admin functions */
+#secBot {
+    height: 70%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+} #secBorderBot {
+    height: 92%;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 41, 135);
+    border: solid rgb(0, 41, 135) 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 5px rgb(0, 41, 135, .9);
+}
+
+
+/* STUDENT SECTION - container for admin student management styling */
+#secStudentHistory {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+}
+.headerWelc {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(0, 41, 135);
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 400%;
+    text-align: center;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+}
+.secButtons {
+    height: 15%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} #secBtnTop, #secBtnBot {
+    height: 50%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+} #secBtnTop > button, #secBtnBot > button {
+    height: 75%;
+    width: 20%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 120%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #secBtnTop > button:hover, #secBtnBot > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+}
+.secSearchInputs {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} .secSearchInputs > input {
+    height: 50%;
+    width: 50%;
+    
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 170%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+} .secSearchInputs > select {
+    height: 60%;
+    width: 30%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 160%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+}
+.secTableHolder {
+    height: 45%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+} .divTableContainer {
+    height: 85%;
+    width: 93%;
+    margin-top: .8%;
+    max-height: 85%;
+    overflow-y: auto;
+} .tblData {
+    width: 100%;
+
+    background-color: white;
+} .tblHead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+} .tblHead > tr > th {
+    height: 10%;
+    padding: 1%;
+
+    color: white;
+    font-size: 100%;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    background-color: rgb(0, 41, 135);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+} 
+#tblStudents > tr > td {
+    padding: 1.65%;
+
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 1px;
+    border-radius: 10px;
+} #tblStudents > tr > :nth-child(1) {
+    width: 7%;
+    font-size: 100%;
+} #tblStudents > tr > :nth-child(2) {
+    width: 12.5%;
+    font-size: 100%;
+} #tblStudents > tr > :nth-child(3) {
+    width: 12.5%;
+    font-size: 100%;
+} #tblStudents > tr > :nth-child(4) {
+    width: 7%;
+    font-size: 100%;
+} #tblStudents > tr > :nth-child(5) {
+    width: 12.5%;
+    font-size: 100%;
+} #tblStudents > tr > :nth-child(6) {
+    width: 10%;
+    font-size: 100%;
+} #tblStudents > tr > :nth-child(7) {
+    width: 18%;
+    font-size: 100%;
+} #tblStudents > tr > :nth-child(8) {
+    width: 20%;
+    font-size: 100%;
+}
+#tblStudents > tr > td > button {
+    height: 80%;
+    width: 90%;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #tblStudents > tr > td > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+} #tblStudents > tr > td > button:nth-child(1) {
+    margin-bottom: 10%;
+} #tblStudents > tr > td > button:nth-child(2) {
+    margin-bottom: 10%;
+
+    background-color: rgb(135, 255, 143);
+    box-shadow: 0px 5px 5px 2px rgba(4, 135, 0, 0.5);
+} #tblStudents > tr > td > button:nth-child(2):hover {
+    background-color: rgb(47, 140, 50);
+} #tblStudents > tr > td > button:nth-child(3) {
+    background-color: rgb(255, 135, 135);
+    box-shadow: 0px 5px 5px 2px rgba(135, 0, 0, 0.5);
+} #tblStudents > tr > td > button:nth-child(3):hover {
+    background-color: rgb(135, 0, 0);
+}
+#tblStudents > tr > td > input {
+    height: 50%;
+    width: 100%;
+    margin-left: -8%;
+    
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+} #tblStudents > tr > td > select {
+    height: 60%;
+    width: 100%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+}
+
+
+/* LIBRARIAN SECTION - container for admin librarian management styling */
+#secLibrarianHistory {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+}
+.secButtonsAltFormat {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+} .secButtonsAltFormat > button {
+    height: 65%;
+    width: 17%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 123%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} .secButtonsAltFormat > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+}
+#tblLibrarians > tr > td {
+    padding: 1.65%;
+
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 1px;
+    border-radius: 10px;
+} #tblLibrarians > tr > :nth-child(1) {
+    width: 10%;
+    font-size: 100%;
+} #tblLibrarians > tr > :nth-child(2) {
+    width: 20%;
+    font-size: 100%;
+} #tblLibrarians > tr > :nth-child(3) {
+    width: 20%;
+    font-size: 100%;
+} #tblLibrarians > tr > :nth-child(4) {
+    width: 25%;
+    font-size: 100%;
+} #tblLibrarians > tr > :nth-child(5) {
+    width: 25%;
+    font-size: 100%;
+}
+#tblLibrarians > tr > td > button {
+    height: 80%;
+    width: 90%;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #tblLibrarians > tr > td > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+} #tblLibrarians > tr > td > button:nth-child(1) {
+    margin-bottom: 10%;
+} #tblLibrarians > tr > td > button:nth-child(2) {
+    margin-bottom: 10%;
+
+    background-color: rgb(135, 255, 143);
+    box-shadow: 0px 5px 5px 2px rgba(4, 135, 0, 0.5);
+} #tblLibrarians > tr > td > button:nth-child(2):hover {
+    background-color: rgb(47, 140, 50);
+} #tblLibrarians > tr > td > button:nth-child(3) {
+    background-color: rgb(255, 135, 135);
+    box-shadow: 0px 5px 5px 2px rgba(135, 0, 0, 0.5);
+} #tblLibrarians > tr > td > button:nth-child(3):hover {
+    background-color: rgb(135, 0, 0);
+}
+#tblLibrarians > tr > td > input {
+    height: 50%;
+    width: 100%;
+    margin-left: -3.5%;
+    
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+}
+
+
+/* BOOK HISTORY SECTION - container for admin book history management styling */
+#secBooks {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+}
+#tblBooks > tr > td {
+    padding: 1.65%;
+
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 1px;
+    border-radius: 10px;
+} #tblBooks > tr > :nth-child(1) {
+    width: 7%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(2) {
+    width: 18%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(3) {
+    width: 15%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(4) {
+    width: 12.5%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(5) {
+    width: 12.5%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(6) {
+    width: 10%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(7) {
+    width: 10%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(8) {
+    width: 15%;
+    font-size: 100%;
+} 
+#tblBooks > tr > td > button {
+    height: 80%;
+    width: 100%;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    background-color: rgb(255, 135, 135);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgba(135, 0, 0, 0.5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #tblBooks > tr > td > button:hover {
+    color: white;
+    background-color: rgb(135, 0, 0);
+    transform: scale(1.04);
+}
+
+
+/* ACTIVITY HISTORY SECTION - container for admin activity history management styling */
+#secActivityHistory {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+}
+#tblActions > tr > td {
+    padding: 1.65%;
+
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 1px;
+    border-radius: 10px;
+} #tblActions > tr > :nth-child(1) {
+    width: 20%;
+    font-size: 100%;
+} #tblActions > tr > :nth-child(2) {
+    width: 20%;
+    font-size: 100%;
+} #tblActions > tr > :nth-child(3) {
+    width: 20%;
+    font-size: 100%;
+} #tblActions > tr > :nth-child(4) {
+    width: 20%;
+    font-size: 100%;
+} #tblActions > tr > :nth-child(5) {
+    width: 20%;
+    font-size: 100%;
+}
+#tblActions > tr > td > button {
+    height: 80%;
+    width: 100%;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    background-color: rgb(255, 135, 135);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgba(135, 0, 0, 0.5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #tblActions > tr > td > button:hover {
+    color: white;
+    background-color: rgb(135, 0, 0);
+    transform: scale(1.04);
+}
+
+/* POP UP MODIFICATIONS - styling for admin view pop-ups */
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.button-style {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+
+} .button-style:hover {
+    background-color: #0056b3;
+}
+#popupContainer {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+   
+} #popup-outer-container {
+    position: relative;
+    background-color: rgb(0, 41, 135);
+    padding: 20px;
+    width: 30%;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+    box-sizing: border-box;
+
+} #popup-content {
+    background-color:white;
+    padding: 20px;
+    width: auto;
+    color: rgb(0, 41, 135);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+} #popupClive {
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+    top: -35%;
+    left: 31%;
+}

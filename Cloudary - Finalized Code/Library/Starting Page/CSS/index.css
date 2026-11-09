@@ -1,0 +1,100 @@
+
+
+#registerStudent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#secRegisterPage > * {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-style {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: rgb(0, 41, 135);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    
+    
+}
+
+.button-style:hover {
+    background-color: #0056b3;
+}
+
+#popupContainer {
+    display: none; /* Initially hidden */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+   
+}
+
+#popup-outer-container {
+    position: relative;
+    background-color: rgb(0, 41, 135);
+    padding: 20px;
+    width: 30%;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+    box-sizing: border-box;
+
+}
+
+#popup-content {
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;;
+    padding: 20px;
+    width: auto;
+    color: rgb(0, 41, 135);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.5);
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+}
+
+#popupClive {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+    top: -35%;
+    left: 31%;
+    
+}
+
+#popupRegClive {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+    top: -20%;
+    left: 31%;
+    
+}

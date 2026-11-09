@@ -1,0 +1,211 @@
+/* BODY - to remove default margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MAIN - main container */
+#secLogInAs {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(to bottom right, rgb(135,182,255), rgb(115, 147, 252), rgb(36,115,255), rgb(115, 147, 252), rgb(135,182,255));
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* CLOUDS SECTION - section divs that hold the ornamental "clouds" on the sides*/
+#divCloud1 {    
+    height: 45%;
+    width: 30%;
+    z-index: 1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url(./Assets/Clouds\ 1.png);
+    border-bottom-right-radius: 370px;
+    background-size: auto;
+    background-position: 70% 97%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 15px rgb(0, 41, 135));
+} #divCloud2 {
+    height: 30%;
+    width: 30%;
+    z-index: 1;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background-image: url(./Assets/Clouds\ 2.png);
+    border-top-left-radius: 200%;
+    background-size: auto;
+    background-position: 7% 6%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 15px rgb(0, 41, 135));
+}
+
+
+/* OUTER DIV - to serve as the extra layer of border for aesthetic purposes */
+#divWelcomeBorder {
+    height: 75%;
+    width: 75%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 41, 135);
+    border: solid rgb(0, 41, 135) 35px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px 5px rgb(0, 41, 135, .9);
+}
+/* INNER ARTICLE - main body of the options menu */
+#artWelcomeChoices {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: 1fr 1.7fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "a1 a2 a3";
+
+    background-color: white;
+    border-radius: 40px;
+
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+}
+/* WELCOME SECTION - contains the site logo and text along with some animations */
+#headerWelcome {
+    grid-area: header;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} #divImage {
+    height: 105%;
+    width: 23%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform .5s ease;
+} #divImage > img {
+    height: 90%;
+    width: 95%;
+
+    filter: drop-shadow(0px 0px 20px rgb(0, 41, 135));
+}  #divText {
+    height: 75%;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} #artWelcome, #artCloudary {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 400%;
+
+    color: black;
+    filter: drop-shadow(0px 0px 5px rgb(226, 226, 226));
+} #artWelcome {
+    margin-bottom: -35px;
+} #artCloudary {
+    color: rgb(0, 41, 135);
+    font-size: 650%;
+
+    filter: drop-shadow(0px 0px 10px rgb(135, 182, 255));
+}
+/* ANCHOR OPTIONS - anchor tags that hold the entire option "cards" for the purpose of selecting log in options */
+#logInStudent {
+    grid-area: a1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+} #logInLibrarian {
+    grid-area: a2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+} #logInAdmin {
+    grid-area: a3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+} 
+/* SECTION OPTIONS - body of the option cards along with its animations */
+.secOptions {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.option {
+    height: 90%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+
+    background-color: rgb(135, 182, 255);
+    border-radius: 40px;
+    box-shadow: 0px 10px 10px 0px rgb(0, 41, 135, .7);
+
+    transition:  transform 0.5s ease, background-color 0.5s ease;
+} 
+/* IMAGE CONTAINER - section tag class that holds all the images as well as their sizes */
+.imageHolder {
+    height: 30%;
+    width: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} #img1 { 
+    height: 95%;
+    width: 100%;
+} #img2 {
+    height: 100%;
+    width: 103%;
+} #img3 {
+    height: 90%;
+    width: 90%;
+} 
+/* ARTICLE OPTIONS - option card text */
+.option > article {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 185%;
+    text-align: center;
+    color: black;
+
+    transition: color .5s ease;
+} 

@@ -1,0 +1,642 @@
+/* BODY - to remove default margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MAIN - main container */
+main {
+    height: 200vh;
+    width: 98.9vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-image: url(./Assets/Student\ Page\ BG.png), linear-gradient(to bottom right, rgb(135,182,255), rgb(115, 147, 252), rgb(36,115,255), rgb(115, 147, 252), rgb(135,182,255));
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* OUTSIDE ELEMENTS - for the site logo */
+#imgClive {
+    height: 30%;
+    width: 18%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    border-bottom-right-radius: 250%;
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+
+    transition: transform .5s ease;
+} #imgClive:hover {
+    transform: scale(1.05);
+}
+
+
+/* TOP SECTION - styles for the header and buttons */
+#secLibrarianPage {
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} #secBorderTop {
+    height: 70%;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 41, 135);
+    border: solid rgb(0, 41, 135) 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 5px rgb(0, 41, 135, .9);
+} #divBodyTop {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+} 
+#secTextTop {
+    height: 60%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+} #artWelc {
+    margin-bottom: -1.7%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 250%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} #artName {
+    color: rgb(0, 41, 135);
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 370%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} #artID {
+    margin-top: -.5%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 150%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+}
+#secButtonsTop {
+    height: 40%;
+    width: 100%;
+    margin-top: -1.2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+} #secButtonsTop > button {
+    height: 55%;
+    width: 30%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 170%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #secButtonsTop > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+}
+
+
+/* BOTTOM SECTION - container for the differing page contents ie. manage and activity history perspectives */
+#secBot {
+    height: 70%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* border: solid black 1px; */
+} #secBorderBot {
+    height: 92%;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 41, 135);
+    border: solid rgb(0, 41, 135) 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 5px rgb(0, 41, 135, .9);
+}
+
+
+/* MANAGE DIV - contains all the elements needed for the manage books veiw */
+#secBooksList {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+} 
+.headerWelc {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(0, 41, 135);
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 350%;
+    text-align: center;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+
+    /* border: solid black 1px; */
+}
+.secButtons {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+
+    /* border: solid black 1px; */
+} .secButtons > button {
+    height: 65%;
+    width: 17%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 115%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} .secButtons > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+}
+.secSearchInputs {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: solid black 1px; */
+} .secSearchInputs > input {
+    height: 50%;
+    width: 50%;
+    
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 120%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+} .secSearchInputs > select {
+    height: 60%;
+    width: 30%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 160%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+}
+#btnAddBook {
+    height: 25%;
+    width: 50%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 150%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #btnAddBook:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+}
+#secAddForm {
+    height: 25%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: solid black 1px; */
+} #secNewBook {
+    height: 100%;
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+} #secNewBook > input {
+    height: 20%;
+    width: 70%;
+    
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 150%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+} #imgSeparator {
+    height: 90%;
+} #artButtons {
+    height: 100%;
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+} #btnSubmitBook {
+    height: 25%;
+    width: 70%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 150%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #btnSubmitBook:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+} #btnCancelBook {
+    height: 25%;
+    width: 70%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 150%;
+    text-align: center;
+
+    background-color: rgb(255, 135, 135);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgba(135, 0, 0, 0.5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #btnCancelBook:hover {
+    color: white;
+    background-color: rgb(135, 0, 0);
+    transform: scale(1.04);
+}
+.secTableHolder {
+    height: 45%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    /* border: solid black 1px; */
+} .divTableContainer {
+    height: 85%;
+    width: 93%;
+    margin-top: .8%;
+    max-height: 85%;
+    overflow-y: auto;
+} 
+.tblData {
+    width: 100%;
+
+    background-color: white;
+} .tblHead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+} .tblHead > tr > th {
+    height: 10%;
+    padding: 1%;
+
+    color: white;
+    font-size: 100%;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    background-color: rgb(0, 41, 135);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+} 
+#tblBooks > tr > td {
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 1px;
+    border-radius: 10px;
+} #tblBooks > tr > :nth-child(1) {
+    width: 10%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(2) {
+    width: 23.34%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(3) {
+    width: 23.34%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(4) {
+    width: 16.67%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(5) {
+    width: 10%;
+    font-size: 100%;
+} #tblBooks > tr > :nth-child(6) {
+    width: 95%;
+    font-size: 100%;
+}
+#tblBooks > tr > td > input {
+    height: 50%;
+    width: 80%;
+    
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+}
+#tblBooks > tr > td > button {
+    height: 80%;
+    width: 90%;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #tblBooks > tr > td > button:hover {
+    color: white;
+    background-color: rgb(0, 41, 135);
+    transform: scale(1.04);
+} 
+#tblBooks > tr > td > button:nth-child(1) {
+    margin-bottom: 10%;
+} #tblBooks > tr > td > button:nth-child(2) {
+    margin-bottom: 10%;
+
+    background-color: rgb(135, 255, 143);
+    box-shadow: 0px 5px 5px 2px rgba(4, 135, 0, 0.5);
+} #tblBooks > tr > td > button:nth-child(2):hover {
+    background-color: rgb(47, 140, 50);
+} #tblBooks > tr > td > button:nth-child(3) {
+    background-color: rgb(255, 135, 135);
+    box-shadow: 0px 5px 5px 2px rgba(135, 0, 0, 0.5);
+} #tblBooks > tr > td > button:nth-child(3):hover {
+    background-color: rgb(135, 0, 0);
+}
+
+
+
+/* ACTIVITY HISTORY DIV - contains all the elements needed for the activity history veiw */
+#secBookHistory {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+}
+#tblBooksHistory > tr > td {
+    padding: 1.65%;
+
+    color: black;
+    font-family: "Kosugi Maru", sans-serif;
+    font-style: normal;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 1px;
+    border-radius: 10px;
+} #tblBooksHistory > tr > :nth-child(1) {
+    width: 7%;
+    font-size: 100%;
+} #tblBooksHistory > tr > :nth-child(2) {
+    width: 15%;
+    font-size: 100%;
+} #tblBooksHistory > tr > :nth-child(3) {
+    width: 18%;
+    font-size: 100%;
+} #tblBooksHistory > tr > :nth-child(4) {
+    width: 10%;
+    font-size: 100%;
+} #tblBooksHistory > tr > :nth-child(5) {
+    width: 7%;
+    font-size: 100%;
+} #tblBooksHistory > tr > :nth-child(6) {
+    width: 18%;
+    font-size: 100%;
+} #tblBooksHistory > tr > :nth-child(7) {
+    width: 10%;
+    font-size: 100%; 
+} #tblBooksHistory > tr > :nth-child(8) {
+    width: 15%;
+    font-size: 100%;
+}
+#tblBooksHistory > tr > td > button {
+    height: 80%;
+    width: 95%;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    text-align: center;
+
+    background-color: rgb(255, 135, 135);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgba(135, 0, 0, 0.5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} #tblBooksHistory > tr > td > button:hover {
+    color: white;
+    background-color: rgb(135, 0, 0);
+    transform: scale(1.04);
+}
+
+
+/* POPUP STYLING */
+.button-style {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #007bff;
+    color: rgb(0, 41, 135);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    
+    
+}
+
+.button-style:hover {
+    background-color: #0056b3;
+}
+
+#popupContainer {
+    display: none; /* Initially hidden */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+   
+}
+
+#popup-outer-container {
+    position: relative;
+    background-color: rgb(0, 41, 135);
+    padding: 20px;
+    width: 30%;
+    height: auto;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+    box-sizing: border-box;
+
+}
+
+#popup-content {
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;;
+    padding: 20px;
+    width: auto;
+    color: rgb(0, 41, 135);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255, 0.5);
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+}
+
+#popupClive {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+    top: -35%;
+    left: 31%;
+    
+}

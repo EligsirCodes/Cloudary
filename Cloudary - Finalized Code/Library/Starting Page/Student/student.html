@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/StudentPageStyling.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Figtree:ital,wght@0,300..900;1,300..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Figtree:ital,wght@0,300..900;1,300..900&family=Kosugi+Maru&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- OUTSIDE ELEMENTS - site logo -->
+    <img id="imgClive" src="./CSS/Assets/Clive Sideways.png" alt="Site Logo">
+
+    <main>
+        <!-- TOP SECTION - welcome text and student options -->
+        <section id="secStudentPage">
+            <section id="secBorderTop">
+                <div id="divBodyTop">
+                    <section id="secTextTop">
+                        <article id="artWelc">Welcome to Cloudary!</article>
+                        <article id="artName"></article>
+                        <article id="artID"></article>
+                    </section>
+
+                    <section id="secButtonsTop">
+                        <button id="btnSeeBooks">Explore Our Cloudary</button>
+                        <button id="btnReturnBooks">Return Books</button>
+                        <button id="btnLogOutStudent">Log Out</button>
+                    </section>
+                </div>
+            </section>
+        </section>
+
+        <!-- BOTTOM SECTION - holds both the library books list and user borrowed books list -->
+        <section id="secBot" style="display: none;">
+            <section id="secBorderBot">
+                <!-- LIBRARY EXPLORATION DIV - contains the elements of the "Explore Library/Cloudary" page -->
+                <div id="secBooksList" style="display: none;">
+                    <!-- HEADER -->
+                    <header class="headerWelc">Cloudary Collection</header>
+
+                    <!-- BUTTON OPTIONS -->
+                    <section class="secButtonsExplore">
+                        <button id="btnSearchBookId">Search by ID</button>
+                        <button id="btnSearchBookTitle">Search by Title</button>
+                        <button id="btnSearchBookAuthor">Search by Author</button>
+                        <button id="btnSearchBookCategory">Search by Category</button>
+                        <button id="btnSearchBookAvailability">Search by Availability</button>
+                    </section>
+
+                    <!-- SEARCH INPUTS/FILTERS -->
+                    <section class="secSearchInputs" style="display: none;">
+                        <input id="txtSearchBookId" type="number" placeholder="Search by ID" style="display: none;">
+                        <input id="txtSearchBookTitle" type="text" placeholder="Search by Title" style="display: none;">
+                        <input id="txtSearchBookAuthor" type="text" placeholder="Search by Author" style="display: none;">
+                        <input id="txtSearchBookCategory" type="text" placeholder="Search by Category" style="display: none;">
+                        <select id="selBookAvailability" style="display: none;">
+                            <option value="Available"> Available </option>
+                            <option value="Borrowed"> Borrowed </option>
+                        </select>
+                    </section>
+
+                    <!-- MAIN TABLE - for the explore view -->
+                    <section class="secTableHolder">
+                        <div class="divTableContainer">
+                            <table class="tblData">
+                                <thead class="tblHead">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>TITLE</th>
+                                        <th>AUTHOR</th>
+                                        <th>CATEGORY</th>
+                                        <th>AVAILABILITY</th>
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblBooks">
+                                    <tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+
+
+
+                <!-- RETURN BORROWED DIV - contains the elements of the "Return Books" page -->
+                <div id="secBorrowedBooksList" style="display: none;">
+                    <!-- HEADER -->
+                    <header class="headerWelc">Borrowed Books</header>
+
+                    <!-- BUTTON OPTIONS -->
+                    <section class="secButtonsExplore">
+                        <button id="btnSearchBorrowedBookId">Search by ID</button>
+                        <button id="btnSearchBorrowedBookTitle">Search by Title</button>
+                        <button id="btnSearchBorrowedBookAuthor">Search by Author</button>
+                        <button id="btnSearchBorrowedBookCategory">Search by Category</button>
+                    </section>
+
+                    <!-- SEARCH INPUTS/FILTERS -->
+                    <section class="secSearchInputs" style="display: none;">
+                        <input id="txtSearchBorrowedBookId" type="number" placeholder="Search by ID" style="display: none;">
+                        <input id="txtSearchBorrowedBookTitle" type="text" placeholder="Search by Title" style="display: none;">
+                        <input id="txtSearchBorrowedBookAuthor" type="text" placeholder="Search by Author" style="display: none;">
+                        <input id="txtSearchBorrowedBookCategory" type="text" placeholder="Search by Category" style="display: none;">
+                    </section>
+
+                    <!-- MAIN TABLE - for the return borrowed view -->
+                    <section class="secTableHolder">
+                        <div class="divTableContainer">
+                            <table class="tblData">
+                                <thead class="tblHead">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>TITLE</th>
+                                        <th>AUTHOR</th>
+                                        <th>CATEGORY</th>
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblBorrowedBooks">
+                                    <tr>
+                                        <td>1001</td>
+                                        <td>Eligsir's Adventures Vol.1</td>
+                                        <td>Rosales, Luiz Gabriel</td>
+                                        <td>Fantasy</td>
+                                        <td>
+                                            <button>Return Book</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <div id="popupContainer">
+	</div>
+
+	<script src="/Starting Page/JS Assets/jquery-3.7.1.min.js"></script>
+	<script src="/Starting Page/JS Assets/Validation.js"></script>
+	<script src="/Starting Page/JS Assets/Book.js"></script>
+	<script src="/Starting Page/JS Assets/User.js"></script>
+    <script src="/Starting Page/JS Assets/Activity.js"></script>
+    <script src="./JS/studentScript.js"></script>
+    <script src="./JS/StudentAnimation.js"></script>
+
+</body>
+</html>

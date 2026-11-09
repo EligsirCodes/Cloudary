@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> My Document </title>
+	<link rel="stylesheet" href="./CSS/LogInAs.css">
+	<link rel="stylesheet" href="./CSS/LogIn.css">
+	<link rel="stylesheet" href="./CSS/Register.css">
+	<link rel="stylesheet" href="./CSS/index.css">
+
+	<script src="./JS Assets/jquery-3.7.1.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Figtree:ital,wght@0,300..900;1,300..900&family=Pacifico&family=Pixelify+Sans:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main id="secLogInAs">
+        <div id="divCloud1"></div>
+        
+        <!-- BORDER DIV - for aesthetics -->
+        <div id="divWelcomeBorder">
+            <!-- BODY ARTICLE -->
+            <article id="artWelcomeChoices">
+
+                <header id="headerWelcome">
+                    <div id="divImage">
+                        <img src="./CSS/Assets/Clive.png" alt="Site Logo">
+                    </div>
+                    <div id="divText">
+                        <article id="artWelcome">Welcome to</article>
+                        <article id="artCloudary">Cloudary</article>
+                    </div>
+                </header>
+
+                <!-- OPTION 1 SECTION -->
+                <a id="logInStudent" href="#">
+                    <section class="secOptions">
+                        <div class="option" id="divOpt1">
+                            <section class="imageHolder">
+                                <img id="img1" src="./CSS/Assets/Student Dark.png" alt="Students Icon">
+                            </section>
+                            <article>Log In As Student</article>
+                        </div>
+                    </section>
+                </a>
+
+                <!-- OPTION 2 SECTION -->
+                <a id="logInLibrarian" href="#">
+                    <section class="secOptions">
+                        <div class="option" id="divOpt2">
+                            <section class="imageHolder">
+                                <img id="img2" src="./CSS/Assets/Librarian Dark.png" alt="Librarian Icon">
+                            </section>
+                            <article>Log In As Librarian</article>
+                        </div>
+                    </section>
+                </a>
+
+                <!-- OPTION 3 SECTION -->
+                <a id="logInAdmin" href="#">
+                    <section class="secOptions">
+                        <div class="option" id="divOpt3">
+                            <section class="imageHolder">
+                                <img id="img3" src="./CSS/Assets/Admin Dark.png" alt="Admin Icon">
+                            </section>
+                            <article>Log In As Admin</article>
+                        </div>
+                    </section>
+                </a>
+            </article>
+        </div>
+        
+        <div id="divCloud2"></div>
+    </main>
+
+
+    <main id="secLogIn" style="display: none;">
+        <!-- OUTSIDE ELEMENTS - includes the overlapping clouds and the back button -->
+        <div id="divCloud3"></div>
+        <div id="divCloud4"></div>
+        <button id="btnBackToLoginMenu">
+            <img id="imgBackArrow" src="./CSS/Assets/Back Arrow Dark.png" alt="Back Arrow">
+        </button>
+
+        <!-- LEFT SECTION - contains the site slogan -->
+        <section id="secLeft">
+            <article id="artEndless">Endless books,<br>floating in the</article>
+            <article id="artClouds">Cloud.</article>
+        </section>
+
+        <!-- RIGHT SECTION - contains the site logo, header, and form -->
+        <section id="secRight">
+            <!-- SITE LOGO -->
+            <div id="divLogIn">
+                <header id="headerUserLogIn">
+                    <img id="imgClive" src="./CSS/Assets/Clive.png" alt="Site Logo">
+                </header>
+
+                <!-- SITE HEADER -->
+                <div id="divUserLogIn">
+                    <article id="artHeaderText">
+                        <span id="txtLogInAs"></span>
+                        Log In
+                    </article>
+                    
+                    <!-- LOG IN FORM -->
+                    <section id="frmLogIn">
+                        <section class="formSections">
+                            <input id="txtEmailLog" type="text" placeholder="Email">
+                        </section>
+                        <section class="formSections">
+                            <input id="txtPasswordLog" type="password" placeholder="Password">
+                            <button id="btnLogShowPass" type="button">
+                                <img id="imgShowHide" src="./CSS/Assets/Show.png" alt="Show Password">
+                            </button>
+
+                        </section>
+                        <span id="accError"> </span>
+                        <button id="btnLogIn">Log In</button>
+                        <article id="artSignUp">    
+                            Dont have an account yet?
+                            <a id="btnRegisterAccount" href="#">Sign up now</a>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <main id="secRegisterPage" style="display: none;;">
+        <!-- OUTSIDE ELEMENTS - elements outside of the normal program flow -->
+        <div id="divCloud5"></div>
+        <div id="divCloud6"></div>
+        <div id="divSeparator"></div>
+        <img id="imgClive" src="./CSS/Assets/Clive.png" alt="Site Logo">
+        <button id="btnBackToLoginStudent">
+            <img id="imgBackArrow" src="./CSS/Assets/Back Arrow Dark.png" alt="Back Arrow">
+        </button>
+        <button id="btnBackToLoginLibrarian" style="display: none;">
+            <img id="imgBackArrow" src="./CSS/Assets/Back Arrow Dark.png" alt="Back Arrow">
+        </button>
+        <button id="btnBackToLoginAdmin" style="display: none;">
+            <img id="imgBackArrow" src="./CSS/Assets/Back Arrow Dark.png" alt="Back Arrow">
+        </button>
+
+        <!-- CONTENT SECTIONS -->
+        <section id="secRegFormBorder">
+            <div id="divRegFormBody">
+                <!-- LEFT FORM SECTION - contains the base form for validation -->
+                <section id="secRegister">
+                    <form id="frmBase">
+                        <!-- HEADER -->
+                        <header id="headerRegisterAs">
+                            <article id="artTitle"><span id="txtRegisterAs"></span> Registration</article>
+                            <article id="artInstruction">Please fill out the form to complete your registration</article>
+                        </header>
+
+                        <!-- NAME INPUTS -->
+                        <section class="secBaseForm">
+                            <input id="txtFirstName" type="text" placeholder="First Name">
+                            <span id="errorFirstName" ></span>
+                        </section>
+                        <section class="secBaseForm">
+                            <input id="txtLastName" type="text" placeholder="Last Name">
+                            <span id="errorLastName" ></span>
+                        </section>
+
+                        <!-- EMAIL INPUT -->
+                        <section class="secBaseForm">
+                            <input id="txtEmail" type="text" placeholder="Email Address">
+                            <span id="errorEmailAddress"></span>
+                        </section>
+
+                        <!-- PASSWORD INPUTS -->
+                        <section class="secBaseForm">
+                            <section class="secPasswords">
+                                <input id="txtPasswordReg" type="password" placeholder="Password">
+                                <button id="btnRegShowPass" type="button">
+                                    <img id="imgShowHidePass" src="./CSS/Assets/Show.png" alt="Show Password">
+                                </button>
+                            </section>
+                            <span id="errorPass"></span>
+                        </section>
+                        <section class="secBaseForm">
+                            <section class="secPasswords">
+                                <input id="txtConfirmPassword" type="password" placeholder="Confirm Password">
+                                <button id="btnRegConfShowPass" type="button">
+                                    <img id="imgShowHideCon" src="./CSS/Assets/Show.png" alt="Show Password">
+                                </button>
+                            </section>
+                            <span id="errorConfirmPass"></span>
+                        </section>
+                    </form>
+                </section>
+                
+                <!-- RIGHT FORM SECTION - contains the extra specifications needed by students -->
+                <section id="registerStudent" >
+                    <section id="frmStud">
+
+                        <!-- YEAR LEVEL INPUT -->
+                        <section class="secStudForm">
+                            <input id="txtYearLevel" type="number" placeholder="Year Level">
+                            <span id="errorYearLevel"> </span>
+                        </section>
+
+                        <!-- PROGRAM SELECTION -->
+                        <section class="secStudForm">
+                            <select id="selProgram">
+                                <option value="BS Information Technology"> BS Information Technology </option>
+                                <option value="BS History"> BS History </option>
+                                <option value="BS Computer Science"> BS Computer Science </option>
+                                <option value="BS Mathematics"> BS Mathematics </option>
+                                <option value="BS Psychology"> BS Psychology </option>
+                                <option value="BS Engineering"> BS Engineering </option>
+                                <option value="BS Nursing"> BS Nursing </option>
+                                <option value="BS Biochemistry"> BS Biochemistry </option>
+                                <option value="BS Accountancy"> BS Accountancy </option>
+                            </select>
+                        </section>
+
+                        <!-- ACADEMIC YEAR INPUT -->
+                        <section class="secStudForm">
+                            <input id="txtAcaYear" type="text"  placeholder="Academic Year (YYYY-YYYY)">
+                            <span id="errorAcademicYear"> </span>
+                        </section>
+
+                        <!-- REGISTER BUTTON -->
+                        <section class="secStudForm">
+                            <button id="btnRegisterStudent" type="submit">Register</button>
+                        </section>
+                    </section>
+                </section>
+
+                <!-- RIGHT SECTION - contains the extra specifications needed by librarian -->
+                <section id="registerLibrarian" style="display: none;">
+                    <!-- SITE LOGO -->
+                    <img id="imgClive" src="./CSS/Assets/Clive.png" alt="Site Logo">
+
+                    <!-- INFO TEXTS -->
+                    <header id="headerInfo">Join <span>Cloudary</span></header>
+                    <article id="artRecruitment">Register now to manage books and monitor borrowings with ease!</article>
+                    
+                    <!-- REGISTER BUTTON -->
+                    <button id="btnRegisterLibrarian" type="submit">Register</button>
+                </section>
+
+                <!-- RIGHT SECTION - contains the extra specifications needed by admin -->
+                <section id="registerAdmin" style="display: none;">
+                    <!-- SITE LOGO -->
+                    <img id="imgClive" src="./CSS/Assets/Clive.png" alt="Site Logo">
+
+                    <!-- INFO TEXTS -->
+                    <header id="headerInfo">Join <span>Cloudary</span></header>
+                    <article id="artRecruitment">Join as an admin to monitor, edit, and manage library users!</article>
+                    
+                    <!-- REGISTER BUTTON -->
+                    <button id="btnRegisterAdmin" type="submit">Register</button>
+                </section>
+
+            </div>
+        </section>
+    </main>
+
+
+	<div id="popupContainer">
+	</div>
+	
+	<script src="./JS Assets/Validation.js"></script>
+	<script src="./JS Assets/Book.js"></script>
+	<script src="./JS Assets/User.js"></script>
+	<script src="./JS Assets/Activity.js"></script>
+    <script src="./JS/script.js"></script>
+
+	<script src="./JS/LogInAsAnimation.js"></script>
+	<script src="./JS/LogInAnimation.js"></script>
+	<script src="./JS/RegisterAnimation.js"></script>
+
+</body>
+</html>

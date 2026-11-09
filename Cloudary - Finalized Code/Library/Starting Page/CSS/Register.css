@@ -1,0 +1,412 @@
+/* BODY - to remove default margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MAIN - main container */
+#secRegisterPage {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("./Assets/Register\ Page\ BG.png"), linear-gradient(to bottom right, rgb(135,182,255), rgb(115, 147, 252), rgb(36,115,255), rgb(115, 147, 252), rgb(135,182,255));
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* OUTSIDE DIVS - includes the aspects of the cloud decorations, back button, and site logo */
+#divCloud5 {
+    height: 35%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    background-image: url(./Assets/Cloud\ 5.png);
+    background-size: 200%;
+    background-position: 2% 115%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 65%;
+    filter: drop-shadow(0px 0px 20px rgb(0, 41, 135));
+} #divCloud6 {
+    height: 25%;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    background-image: url(./Assets/Cloud\ 6.png);
+    background-size: 230%;
+    background-position: 60% 20%;
+    background-repeat: no-repeat;
+    border-top-right-radius: 75%;
+    filter: drop-shadow(0px 0px 20px rgb(0, 41, 135));
+} 
+#divSeparator {
+    height: 50%;
+    width: 3%;
+    position: absolute;
+    bottom: 1;
+    left: 1;
+    z-index: 1;
+
+    background-image: url(./Assets/Separator.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 20px rgb(0, 41, 135, .5));
+}
+#secRegisterPage > #imgClive {
+    height: 19%;
+    width: 12%;
+    position: absolute;
+    top: 0;
+    left: 1;
+    z-index: 1;
+
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+
+    transition: transform .5s ease;
+}
+#btnBackToLoginStudent, #btnBackToLoginLibrarian, #btnBackToLoginAdmin {
+    height: 7.9%;
+    width: 4.8%;
+    position: absolute;
+    top: 12%;
+    right: 9%;
+    cursor: pointer;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border: solid rgb(0,134,255) 3px;
+    border-right: 5px;
+    border-top: 5px;
+    border-radius: 100%;
+    box-shadow: 0px 5px 15px 1px rgb(0, 41, 135, .4);
+
+    transition: transform .5s ease, background-color .5s ease;
+} #btnBackToLoginStudent > img, #btnBackToLoginLibrarian > img, #btnBackToLoginAdmin > img {
+    height: 90%;
+    width: 90%;
+} 
+
+
+/* MAIN SECTIONS - sections for the content border and body */
+#secRegFormBorder {
+    height: 80%;
+    width: 83%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(0, 41, 135);
+    border: solid rgb(0, 41, 135) 30px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 5px rgb(0, 41, 135, .9);
+} #divRegFormBody {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+} 
+/* LEFT FORM SECTION - contains the base/basic inputs needed for account registration validation */
+#secRegister {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} #frmBase {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} #headerRegisterAs {
+    height: 20%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+} #artTitle  {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 270%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} #artTitle > span {
+    color: rgb(0, 41, 135);
+} #artInstruction {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} .secBaseForm {
+    height: 15%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} .secPasswords {
+    height: 60%;
+    width: 73%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+} .secPasswords > input {
+    height: 80%;
+    width: 82%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 140%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+} #btnRegShowPass, #btnRegConfShowPass {
+    height: 90%;
+    width: 12%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 100%;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+} #imgShowHidePass, #imgShowHideCon  {
+    height: 65%;
+    width: 65%;
+} .secBaseForm > input {
+    height: 50%;
+    width: 70%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 140%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+} .secStudForm > span, .secBaseForm > span {
+    color: rgb(0, 41, 135);
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+}
+
+/* RIGHT FORM SECTION - contains the special section specific for student registrations */
+#registerStudent {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} #frmStud {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} .secStudForm {
+    height: 15%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} .secStudForm > input {
+    height: 50%;
+    width: 70%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 140%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+} #selProgram {
+    height: 65%;
+    width: 72.5%;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 140%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+} #btnRegisterStudent {
+    height: 55%;
+    width: 40%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} 
+
+/* RIGHT INFO - contains the special section specific for librarian registrations */
+#registerLibrarian {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+} #headerInfo {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 370%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} #headerInfo > span {
+    color: rgb(0, 41, 135);
+}
+#artRecruitment {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 170%;
+    text-align: center;
+    margin-top: -3%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+}
+#registerLibrarian > #imgClive {
+    height: 30%;
+    width: 35%;
+    margin-bottom: -7%;
+
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+
+    transition: transform .5s ease;
+} 
+#btnRegisterLibrarian {
+    height: 8%;
+    width: 40%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} 
+/* RIGHT INFO - contains the special section specific for admin registrations */
+#registerAdmin {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+} #headerInfo {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 370%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+} #headerInfo > span {
+    color: rgb(0, 41, 135);
+}
+#artRecruitment {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 180%;
+    text-align: center;
+    margin-top: -3%;
+
+    filter: drop-shadow(0px 0px 5px rgb(0, 41, 135, .4));
+}
+#registerAdmin > #imgClive {
+    height: 30%;
+    width: 35%;
+    margin-bottom: -7%;
+
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+
+    transition: transform .5s ease;
+} 
+#btnRegisterAdmin {
+    height: 8%;
+    width: 40%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} 

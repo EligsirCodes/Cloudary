@@ -1,0 +1,246 @@
+/* BODY - to remove default margins and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MAIN - main container */
+#secLogIn {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-image: url(./Assets/Log\ In\ Page\ BG.png), linear-gradient(to bottom right, rgb(135,182,255), rgb(115, 147, 252), rgb(36,115,255), rgb(115, 147, 252), rgb(135,182,255));
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* OUTSIDE DIVS - includes the aspects of the cloud decorations and back button */
+#divCloud3 {
+    height: 35%;
+    width: 30%;
+
+    position: absolute;
+    top: 0;
+    right: 25%;
+
+    background-image: url(./Assets/Clouds\ 3.png);
+    background-size: 135%;
+    background-position: 60% 110%;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 250%;
+    filter: drop-shadow(0px 0px 20px rgb(0, 41, 135));
+} #divCloud4 {
+    height: 20%;
+    width: 20%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+
+    background-image: url(./Assets/Clouds\ 4.png);
+    background-size: 170%;
+    background-position: 10% 30%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 80%;
+    filter: drop-shadow(0px 0px 20px rgb(0, 41, 135));
+}
+#btnBackToLoginMenu {
+    height: 10%;
+    width: 5.7%;
+    position: absolute;
+    top: 11%;
+    right: 37%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border: solid rgb(0,134,255) 3px;
+    border-right: 5px;
+    border-top: 5px;
+    border-radius: 100%;
+    box-shadow: 0px 5px 15px 1px rgb(0, 41, 135, .4);
+
+    transition: transform .5s ease, background-color .5s ease;
+} #btnBackToLoginMenu > img {
+    height: 90%;
+    width: 90%;
+} 
+
+/* SECTION LEFT - includes the logo design */
+#secLeft {
+    height: 70%;
+    width: 45%;
+    padding-bottom: 6%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} #artEndless, #artClouds {
+    color: white;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 530%;
+    text-align: center;
+
+    filter: drop-shadow(0px 0px 20px rgb(135, 182, 255));
+} #artClouds {
+    color: rgb(0, 41, 135);
+}
+
+
+/* SECTION RIGHT - includes the site icon, form header, and the form itself */
+#secRight {
+    height: 83%;
+    width: 38%;
+
+    background-color: rgb(0, 41, 135);
+    border: solid rgb(0, 41, 135) 30px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 15px 5px rgb(0, 41, 135, .9);
+} #divLogIn {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgb(0, 41, 135, .9) inset;
+} 
+#headerUserLogIn {
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} #headerUserLogIn > #imgClive {
+    height: 100%;
+    width: 40%;
+
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135));
+    
+    transition: transform .5s ease;
+}
+#divUserLogIn {
+    height: 65%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+} #artHeaderText {
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 270%;
+
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135, .4));
+} #artHeaderText > span {
+    color: rgb(0, 41, 135);
+} 
+#frmLogIn {
+    height: 80%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+} #accError {
+    color: rgb(0, 41, 135);
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 100%;
+    z-index: 4;
+
+} .formSections {
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+} .formSections > input {
+    height: 50%;
+    width: 85%;
+    
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 150%;
+    text-align: center;
+
+    border: solid rgb(0, 41, 135) 5px;
+    border-radius: 30px;
+    box-shadow: 0px 7px 15px 1px rgb(0, 41, 135, .4);
+} .formSections > #txtPasswordLog {
+    width: 72%;
+} #btnLogShowPass {
+    height: 60%;
+    width: 11%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 100%;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+} #btnLogShowPass > img {
+    height: 65%;
+    width: 65%;
+} #btnLogIn {
+    height: 15%;
+    width: 40%;
+    margin-top: 1%;
+    margin-bottom: 3.5%;
+    cursor: pointer;
+
+    color: black;
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 130%;
+    text-align: center;
+
+    background-color: rgb(135, 182, 255);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px 2px rgb(0, 41, 135, .5);
+
+    transition: color .5s ease, background-color .5s ease, transform .5s ease;
+} 
+#artSignUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Cherry Bomb One", system-ui;
+    font-style: normal;
+    font-size: 120%;
+    text-align: center;
+
+    filter: drop-shadow(0px 0px 10px rgb(0, 41, 135, .4));
+} #artSignUp > a {
+    color: rgb(135, 182, 255);
+    font-size: 130%;
+
+    transition: transform .5s ease, color .5s ease;
+}
